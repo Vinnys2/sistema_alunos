@@ -1,6 +1,7 @@
 <?php
         include("cabecalho.inc");
 ?>
+        
         <a href = "cad_alunos.php">Cadastro de Alunos</a><br>
         <a href = "">Editar informações de alunos</a><br>
         <a href = "">Remover alunos</a><br>
