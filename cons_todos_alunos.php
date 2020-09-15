@@ -38,8 +38,8 @@
             echo  "<td>". $resultado[1]. "</td>";
             echo  "<td>". $resultado[2]. "</td>";
             echo  "<td>". $resultado[3]. "</td>";
-            echo  "<td><a href='editar_alunos.php?pront='$resultado[0]'>Editar</a></td>";
-            echo  "<td><a href='remove_alunos.php?pront='$resultado[0]'>Remover</a></td>";
+            echo  "<td><a href='editar_alunos.php?pront=$resultado[0]'>Editar</a></td>";
+            echo  "<td><a href='remove_alunos.php?pront=$resultado[0]'>Remover</a></td>";
          echo "</tr>";
 
          

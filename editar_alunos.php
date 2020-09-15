@@ -7,10 +7,10 @@
 	$editar = mysqli_query($con, $SQL); // Consultando e alterando a partir daqui
 	
 	if($editar){ //Verificando se o editar possui informações
-		if(mysqli_num_rows($editar)>0){
+		if(mysqli_num_rows($editar) == 1){
 		
 			while(($resultado = mysqli_fetch_assoc($editar)) != null){
-				$id = $resultado['id_pessoa'];
+				$id = $resultado['id'];
 				$nome = $resultado['nome'];
 				$idade = $resultado['idade'];
 				$endereco = $resultado['endereco'];
@@ -25,23 +25,22 @@
 	}
 	// formulario para enviar para uma outra pagina, e assim modificar através do update
 	echo' 
-	<form action="modificando.php" method="GET">
+	<form action="modificando.php" method="POST">
 		<fieldset>
 			<Legend>Modificar informações do aluno</legend>
-				<label>Id do Aluno:</label>
 				<input type="hidden" name="id" value="'.$id.'"/> 
 				<br>
 				
 				<label>Nome:</label>
-				<input type="text" name="nome_novo" value="'.$nome.'"/>
+				<input type="text" name="nome" value="'.$nome.'"/>
 				<br>
 				
 				<label>Idade:</label>
-				<input type="number" name="endereco_novo" value="'.$idade.'"/>
+				<input type="number" name="endereco" value="'.$idade.'"/>
 				<br>
 				
 				<label>Endereco:</label>
-				<input type="text" name="idade_novo" value="'.$endereco.'"/>
+				<input type="text" name="idade" value="'.$endereco.'"/>
 				<br>
 				
 				

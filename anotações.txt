@@ -1,0 +1,5 @@
+$pront = $_GET --> sempre usar get para link, não tem como usar post nessa ocasião.
+
+if(consulta) --> verifica se tem algum problema com a sintaxe SQL -- (SE não tiver ele continua sem problemas)
+
+header(location:"link"); --> redirecionamento.

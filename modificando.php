@@ -1,12 +1,16 @@
 <?php
-	$id = $_GET['id'];
-	$nome = $_GET['nome_novo'];
-	$idade = $_GET['idade_novo'];
-	$endereco = $_GET['endereco_novo'];
-
 	include('conexao2.php');
+
+	$id = $_POST['id'];
+	$nome = $_POST['nome'];
+	$idade = $_POST['idade'];
+	$endereco = $_POST['endereco'];
+
+
 	
 	$SQL = "UPDATE pessoas SET nome='$nome', idade='$idade', endereco='$endereco' WHERE id=$id";
+	
+	$texto = "Aluno atualizado com sucesso";
 	
 	include('rodape_conexao.php');
 	

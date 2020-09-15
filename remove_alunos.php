@@ -10,5 +10,5 @@ $SQL = "DELETE FROM pessoas WHERE id=$pront";
 
 include('rodape_conexao.php');
 
-header('location:consul_todos_alunos.php');
+header('location:cons_todos_alunos.php');
 ?>

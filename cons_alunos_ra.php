@@ -9,7 +9,7 @@
   if(!empty($_POST))
   {
     $idp = $_POST["idp"];
-    $SQL = "SELECT ID_PESSOA,NOME, ENDERECO, IDADE FROM PESSOAS where id_pessoa = " . $idp . " ";
+    $SQL = "SELECT ID,NOME, ENDERECO, IDADE FROM PESSOAS where id = " . $idp . " ";
 	
     // Não usa o include do rodape_conexão para não ficar grande e os comandos também são diferentes.
     $dados_recuperados = mysqli_query($con, $SQL);
@@ -30,7 +30,7 @@
 
         echo "<fieldset>";
           
-         echo  $resultado['ID_PESSOA'] . " - " . $resultado['NOME'] . " - ". $resultado['ENDERECO'] . " - ". $resultado['IDADE'] . "<br>";
+         echo  $resultado['ID'] . " - " . $resultado['NOME'] . " - ". $resultado['ENDERECO'] . " - ". $resultado['IDADE'] . "<br>";
          
          echo "</fieldset>";   
 
